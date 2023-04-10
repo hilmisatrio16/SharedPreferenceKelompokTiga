@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/fragmentSplash">
+
+    <fragment
+        android:id="@+id/fragmentSplash"
+        android:name="com.example.sharedpreferencekelompoktiga.FragmentSplash"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" />
+    <fragment
+        android:id="@+id/fragmentLogin"
+        android:name="com.example.sharedpreferencekelompoktiga.FragmentLogin"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/fragmentRegist"
+        android:name="com.example.sharedpreferencekelompoktiga.FragmentRegist"
+        android:label="fragment_regist"
+        tools:layout="@layout/fragment_regist" />
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:name="com.example.sharedpreferencekelompoktiga.FragmentHome"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+</navigation>
