@@ -31,6 +31,10 @@ class FragmentLogin : Fragment() {
 
         sharedPref = requireContext().getSharedPreferences("dataprefs", Context.MODE_PRIVATE)
 
+        binding.tvRegist.setOnClickListener {
+            findNavController().navigate(R.id.action_fragmentLogin_to_fragmentRegist)
+        }
+
 
     }
 
