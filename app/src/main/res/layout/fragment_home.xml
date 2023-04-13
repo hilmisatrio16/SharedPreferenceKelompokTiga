@@ -1,14 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".FragmentHome">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <data>
+        <variable
+            name="username"
+            type="String" />
+        <variable
+            name="clickListeners"
+            type="com.example.sharedpreferencekelompoktiga.FragmentHome" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        tools:context=".FragmentHome"
+        android:padding="20dp">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/tv_home_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text='@{username}'
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="20dp"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="30dp"
+            android:text="@string/logout"
+            android:textSize="20sp"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/indigo_blue"
+            app:strokeColor = "@color/light_blue"
+            android:onClick="@{()->clickListeners.logOut()}"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
