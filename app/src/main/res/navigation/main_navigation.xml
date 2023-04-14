@@ -9,20 +9,42 @@
         android:id="@+id/fragmentSplash"
         android:name="com.example.sharedpreferencekelompoktiga.FragmentSplash"
         android:label="fragment_splash"
-        tools:layout="@layout/fragment_splash" />
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_fragmentSplash_to_fragmentLogin"
+            app:destination="@id/fragmentLogin" />
+        <action
+            android:id="@+id/action_fragmentSplash_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+    </fragment>
     <fragment
         android:id="@+id/fragmentLogin"
         android:name="com.example.sharedpreferencekelompoktiga.FragmentLogin"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_fragmentLogin_to_fragmentRegist"
+            app:destination="@id/fragmentRegist" />
+        <action
+            android:id="@+id/action_fragmentLogin_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+    </fragment>
     <fragment
         android:id="@+id/fragmentRegist"
         android:name="com.example.sharedpreferencekelompoktiga.FragmentRegist"
         android:label="fragment_regist"
-        tools:layout="@layout/fragment_regist" />
+        tools:layout="@layout/fragment_regist" >
+        <action
+            android:id="@+id/action_fragmentRegist_to_fragmentLogin"
+            app:destination="@id/fragmentLogin" />
+    </fragment>
     <fragment
         android:id="@+id/fragmentHome"
         android:name="com.example.sharedpreferencekelompoktiga.FragmentHome"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_fragmentHome_to_fragmentLogin"
+            app:destination="@id/fragmentLogin" />
+    </fragment>
 </navigation>
